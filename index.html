@@ -2,9 +2,10 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portal Belajar SD Negeri Nawangsari</title>
+    <title>Website Belajar</title>
 
     <style>
         * {
@@ -12,8 +13,8 @@
         }
 
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
             background: #f1f5f9;
             color: #1e293b;
         }
@@ -21,170 +22,129 @@
         header {
             background: #003366;
             color: white;
-            padding: 28px 16px;
             text-align: center;
+            padding: 35px 20px;
         }
 
         header h1 {
             margin: 0 0 10px;
-            font-size: 26px;
         }
 
         header p {
             margin: 0;
         }
 
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px #00000010;
+        }
+
+        nav a {
+            color: #003366;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
         main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 24px 16px;
-        }
-
-        .pencarian {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 10px;
-            margin-bottom: 24px;
-            font-size: 16px;
-        }
-
-        .daftar-aplikasi {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 18px;
         }
 
         .kartu {
             background: white;
-            border-radius: 14px;
-            padding: 22px;
-            box-shadow: 0 4px 12px #0000000d;
-        }
-
-        .ikon {
-            font-size: 38px;
-        }
-
-        .kartu h2 {
-            font-size: 20px;
-        }
-
-        .kartu p {
-            color: #64748b;
-            line-height: 1.6;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000010;
         }
 
         .tombol {
             display: inline-block;
             background: #003366;
             color: white;
-            padding: 11px 16px;
-            text-decoration: none;
+            padding: 12px 20px;
             border-radius: 8px;
-        }
-
-        .tombol:hover {
-            background: #00509e;
-        }
-
-        .kartu[hidden] {
-            display: none;
+            text-decoration: none;
+            margin-top: 10px;
         }
 
         footer {
+            background: #003366;
+            color: white;
             text-align: center;
-            padding: 24px 12px;
-            color: #64748b;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>SD NEGERI NAWANGSARI</h1>
-    <p>Portal Aplikasi Pembelajaran Digital</p>
-    <p>Belajar Menyenangkan, Prestasi Gemilang</p>
-</header>
+    <header>
+        <h1>SELAMAT DATANG</h1>
+        <p>Website Belajar dan Aplikasi Pendidikan</p>
+    </header>
 
-<main>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#aplikasi">Aplikasi</a>
+        <a href="#tentang">Tentang</a>
+    </nav>
 
-    <h2>Daftar Aplikasi Pembelajaran</h2>
+    <main>
 
-    <input
-        type="search"
-        id="pencarian"
-        class="pencarian"
-        placeholder="Cari aplikasi pembelajaran..."
-        aria-label="Cari aplikasi"
-    >
+        <section class="kartu" id="beranda">
+            <h2>Beranda</h2>
 
-    <section class="daftar-aplikasi">
-
-        <article class="kartu" data-nama="mapsi pai agama islam">
-            <div class="ikon">📖</div>
-            <h2>Latihan MAPSI</h2>
             <p>
-                Aplikasi latihan soal PAI dan persiapan
-                lomba MAPSI untuk siswa sekolah dasar.
+                Selamat datang di website belajar.
+                Website ini dibuat untuk menyediakan
+                informasi dan aplikasi pembelajaran.
             </p>
-            <a class="tombol" href="./aplikasi/mapsi/">
-                Buka Aplikasi
-            </a>
-        </article>
+        </section>
 
-        <article class="kartu" data-nama="matematika berhitung">
-            <div class="ikon">🔢</div>
-            <h2>Belajar Matematika</h2>
+        <section class="kartu" id="aplikasi">
+            <h2>Aplikasi Pembelajaran</h2>
+
             <p>
-                Latihan berhitung, operasi bilangan,
-                dan pemecahan masalah.
+                Nantinya, bagian ini dapat diisi dengan
+                berbagai aplikasi pembelajaran interaktif.
             </p>
-            <a class="tombol" href="./aplikasi/matematika/">
-                Buka Aplikasi
-            </a>
-        </article>
 
-        <article class="kartu" data-nama="tka ujian simulasi">
-            <div class="ikon">📝</div>
-            <h2>Simulasi TKA</h2>
+            <a href="#" class="tombol">
+                Mulai Belajar
+            </a>
+        </section>
+
+        <section class="kartu" id="tentang">
+            <h2>Tentang Website</h2>
+
             <p>
-                Sarana latihan soal Bahasa Indonesia
-                dan Matematika.
+                Website ini dibuat menggunakan HTML,
+                CSS, dan GitHub Pages.
             </p>
-            <a class="tombol" href="./aplikasi/tka/">
-                Buka Aplikasi
-            </a>
-        </article>
+        </section>
 
-    </section>
+    </main>
 
-</main>
-
-<footer>
-    <p>© 2026 SD Negeri Nawangsari</p>
-    <p>Portal pembelajaran digital sekolah</p>
-</footer>
-
-<script>
-    const pencarian = document.getElementById("pencarian");
-    const kartu = document.querySelectorAll(".kartu");
-
-    pencarian.addEventListener("input", function () {
-        const kata = this.value.toLowerCase().trim();
-
-        kartu.forEach(function (item) {
-            const isi = (
-                item.innerText + " " +
-                item.dataset.nama
-            ).toLowerCase();
-
-            item.hidden = !isi.includes(kata);
-        });
-    });
-</script>
+    <footer>
+        <p>Website Belajar &copy; 2026</p>
+    </footer>
 
 </body>
 </html>
